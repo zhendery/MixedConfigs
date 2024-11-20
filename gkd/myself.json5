@@ -6,11 +6,27 @@
   checkUpdateUrl: './myself.json5',
   categories: [],
   apps: [
-  //   {
-  //     id: 'com.tencent.mobileqq',
-  //     name: 'QQ',
-  //     groups: [
-  //     ],
-  //  },
+    {
+      id: 'com.tencent.mobileqq',
+      name: 'QQ',
+      groups: [
+        {
+          key: 0,
+          name: '说说详情广告',
+          desc: 'QQ空间说说详情页局部广告',
+          activityIds: [
+            'com.qzone.reborn.base.QZoneTransparentShellActivity',
+            'com.qzone.reborn.base.QZoneShellActivity',
+          ],
+          fastQuery: true,
+          matches: '[id="com.tencent.mobileqq.qzone_df_impl:id/g_x"]',
+          exampleUrls: 'https://e.gkd.li/b78a3e44-3bd9-445d-9199-e989269c2be3',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17009847',
+            'https://i.gkd.li/i/17815694',
+          ],
+        },
+      ],
+    },
   ],
 }
