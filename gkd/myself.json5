@@ -1,16 +1,16 @@
 {
   id: 16,
   name: '我自己的GKD订阅',
-  version: 2,
+  version: 1,
   author: 'zhendery',
   checkUpdateUrl: './myself.json5',
   categories: [],
   apps: [
-    {
-      // id: 'com.tencent.mobileqq',
-      // name: 'QQ',
-      // groups: [
-      // ],
-    },
+  //   {
+  //     id: 'com.tencent.mobileqq',
+  //     name: 'QQ',
+  //     groups: [
+  //     ],
+  //  },
   ],
 }
