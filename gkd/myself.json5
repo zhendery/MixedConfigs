@@ -1,7 +1,7 @@
 {
   id: 16,
   name: '我自己的GKD订阅',
-  version: 2,
+  version: 3,
   author: 'zhendery',
   checkUpdateUrl: './myself.json5',
   categories: [],
@@ -24,6 +24,53 @@
           snapshotUrls: [
             'https://i.gkd.li/i/17009847',
             'https://i.gkd.li/i/17815694',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.vgjump.jump',
+      name: 'Jump',
+      groups: [
+        {
+          key: 0,
+          name: '权限提示-通知权限',
+          desc: '点击关闭',
+          rules: [
+            {
+              fastQuery: true,
+              activityIds: '.ui.game.detail.GameDetailActivity',
+              matches: [
+                '[vid="clRoot"][visibleToUser=true]',
+                '[vid="tvClose"][visibleToUser=true]',
+              ],
+              exampleUrls: 'https://e.gkd.li/cf2fa921-b694-4fc3-9af9-f8ef45bac455',
+              snapshotUrls: 'https://i.gkd.li/i/17949205',
+            },
+          ],
+        },
+        {
+          key: 1,
+          name: '局部广告-卡片广告',
+          desc: '点击关闭',
+          rules: [
+            {
+              fastQuery: true,
+              activityIds: [
+                '.ui.game.detail.GameDetailActivity',
+                '.ui.content.detail.ContentDetailActivity',
+              ],
+              matches: [
+                '[vid="clADSDKContainer"][visibleToUser=true]',
+                '[vid="clADMid"][visibleToUser=true]',
+                '[vid="ivSDKClose"][visibleToUser=true]',
+              ],
+              exampleUrls: 'https://e.gkd.li/d68c487b-ce63-4d9f-afc3-cc94b3490a33',
+              snapshotUrls: [
+                'https://i.gkd.li/i/17949888',
+                'https://i.gkd.li/i/17949885',
+              ],
+            },
           ],
         },
       ],
