@@ -6,6 +6,8 @@
 10.0.0.11   pc.in
 10.0.0.14   k40.in
 
+10.0.0.5    homeassistant.local
+
 # VPS
 129.146.229.29   oracle1.vps
 141.148.141.202  oracle.vps
