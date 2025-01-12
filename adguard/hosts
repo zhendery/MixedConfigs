@@ -7,8 +7,9 @@
 10.0.0.14   k40.in
 
 # VPS
-141.148.136.1    oracle1.vps
+129.146.229.29   oracle1.vps
 141.148.141.202  oracle.vps
+129.146.105.180  services.vps
 
 # zerotier
 10.147.17.208    k40.zero
