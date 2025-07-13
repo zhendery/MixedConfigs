@@ -1,7 +1,7 @@
 {
-  id: 16,
+  id: 17,
   name: '我自己的GKD订阅',
-  version: 5,
+  version: 6,
   author: 'zhendery',
   checkUpdateUrl: './myself.json5',
   categories: [],
@@ -11,46 +11,69 @@
       name: 'QQ',
       groups: [
         {
-          key: 0,
-          name: '说说详情广告',
-          desc: 'QQ空间说说详情页局部广告',
-          activityIds: [
-            'com.qzone.reborn.base.QZoneTransparentShellActivity',
-            'com.qzone.reborn.base.QZoneShellActivity',
-          ],
-          fastQuery: true,
-          matches: '[id="com.tencent.mobileqq.qzone_df_impl:id/g_x"]',
-          exampleUrls: 'https://e.gkd.li/b78a3e44-3bd9-445d-9199-e989269c2be3',
-          snapshotUrls: [
-            'https://i.gkd.li/i/17009847',
-            'https://i.gkd.li/i/17815694',
-          ],
-        },
-      ],
-    },
-    {
-      id: 'com.vgjump.jump',
-      name: 'Jump',
-      groups: [
-        {
-          key: 0,
-          name: '局部广告-信息流',
-          desc: '点击关闭',
+          key: 2,
+          name: '分段广告-好友动态-卡片广告',
           rules: [
             {
-              fastQuery: true,
+              key: 0,
               activityIds: [
-                '.ui.main.MainActivity',
+                'com.tencent.mobileqq.activity.SplashActivity',
+                'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
               ],
-              matches: '[vid="ivSDKClose"][visibleToUser=true]',
-              exampleUrls: [
-                'https://e.gkd.li/388a915b-5b91-4a4a-8bd3-330b346b2864',
-                'https://e.gkd.li/d68c487b-ce63-4d9f-afc3-cc94b3490a33',
+              matches: 'View[desc="广告"] + ImageView[clickable=true]',
+              exampleUrls: 'https://e.gkd.li/21ede3d4-b1b7-4e85-b4d3-2c4876420a71',
+              snapshotUrls: [
+                'https://i.gkd.li/i/12847842',
+                'https://i.gkd.li/i/13787345',
+              ],
+            },
+            {
+              key: 1,
+              activityIds: [
+                'com.tencent.mobileqq.activity.SplashActivity',
+                'com.qzone.reborn.feedpro.activity.QzoneFriendFeedProActivity',
+              ],
+              matches: [
+                '[desc="广告 展开 按钮"] > [desc="关闭"]',
+                'TextView[text="广告"] < LinearLayout[desc="更多"]',
               ],
               snapshotUrls: [
-                'https://i.gkd.li/i/17949888',
-                'https://i.gkd.li/i/17949885',
-                'https://i.gkd.li/i/18004837',
+                'https://i.gkd.li/i/14138572',
+                '',
+              ],
+            },
+            {
+              preKeys: [
+                0
+              ],
+              key: 2,
+              fastQuery: true,
+              activityIds: [
+                'com.tencent.mobileqq.activity.SplashActivity',
+                'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+              ],
+              matches: '@[clickable=true] > * > ImageView + [text="隐藏此条动态"]',
+              snapshotUrls: [
+                'https://i.gkd.li/i/13761147',
+                'https://i.gkd.li/i/13849730',
+              ],
+            },
+            {
+              preKeys: [
+                0,
+                1
+              ],
+              key: 4,
+              fastQuery: true,
+              activityIds: [
+                'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+                'com.tencent.mobileqq.activity.SplashActivity',
+              ],
+              matches: '@[clickable=true] >(1,2) ImageView + [text="关闭此条广告"]',
+              snapshotUrls: [
+                'https://i.gkd.li/i/12840889',
+                'https://i.gkd.li/i/13831867',
+                'https://i.gkd.li/i/14138571',
               ],
             },
           ],
